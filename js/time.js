@@ -28,7 +28,9 @@ const getDeadlineFromURL = () => {
   const description = parametersURL.get("desc") || "WE´RE LAUNCHING SOON";
 
   deadlineFromURL = parametersURL.get("date") || "";
+  deadlineFromURL += " ";
   deadlineFromURL += parametersURL.get("time") || "";
+  deadlineFromURL += " ";
   deadlineFromURL += parametersURL.get("gmt") || "";
 
   // parametersURL.forEach((element) => (deadlineFromURL += ` ${element}`));
@@ -40,7 +42,7 @@ const getDeadlineFromURL = () => {
     console.log("Invalid or nonexistent Date form URL.");
     deadline = addDays(getToday(), 14);
   }
-  console.log("deadline", deadline);
+  console.log("deadline parsed:", deadline);
 
   return { deadline, description };
 };

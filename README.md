@@ -17,10 +17,12 @@ Your users should be able to:
 
 Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
 
-## Setting new deadline
+## Setting new deadline - Actual method
 
 Your can set a new deadline event (future o past) by adding query strings in the URL, for example:
-[this](https://sarganar.github.io/launch-countdown-timer/?date=2021-02-09&time=9:00&gmt=-3:00&desc=FEC Meeting).
+(https://sarganar.github.io/launch-countdown-timer/?date=2021-02-09&time=9:00&gmt=-3:00&desc=FEC).
+
+If no query string, the app sets a demo deadline @ 14 days in the future.
 
 ## Technologies used
 
