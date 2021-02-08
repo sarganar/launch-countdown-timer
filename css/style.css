@@ -1,0 +1,237 @@
+/* ------------- UTILITIES -----------------------*/
+/* box sizing de Paul Irish */
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* html,
+body {
+  margin: 0;
+  padding: 0;
+} */
+.container {
+  max-width: 80rem;
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* ------------- STYLES -----------------------*/
+body {
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 5px;
+
+  background-color: hsl(266, 19%, 14%);
+  position: relative;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  margin: 0;
+}
+
+:root {
+  --grayish-blue: hsl(237, 18%, 59%);
+  --soft-red: hsl(345, 95%, 68%);
+
+  --verydark-desaturated-blue: hsl(245, 21%, 22%);
+  --dark-desaturated-blue: hsl(236, 21%, 26%);
+
+  --very-dark-blue: hsl(235, 16%, 14%);
+  --mostly-black-blue: hsl(234, 17%, 12%);
+}
+main {
+  flex: 1 0 auto;
+}
+/* -------------- DESCRIPTION TITLE -------------------*/
+
+.description {
+  color: white;
+  text-align: center;
+  padding-top: 12rem;
+}
+/* mobile landscape*/
+@media (min-width: 560px) {
+  .description {
+    padding-top: 3rem;
+  }
+}
+@media (min-width: 768px) {
+  .description {
+    padding-top: 12rem;
+  }
+}
+
+.description p {
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  .description p {
+    letter-spacing: 8px;
+  }
+}
+/* -------------- COUNTDOWN -------------------*/
+.countdown {
+  margin-top: 6rem;
+  display: flex;
+  justify-content: space-between;
+  width: 92%;
+  max-width: 40rem;
+}
+
+@media (min-width: 768px) {
+  .countdown {
+    max-width: 59rem;
+  }
+}
+.timeunit {
+  width: fit-content;
+}
+.flip-card {
+  width: 6.7rem;
+  height: 6rem;
+  margin: 0 auto;
+  background-color: var(--dark-desaturated-blue);
+  /* border: 1px solid orange; */
+  border-radius: 5px;
+  position: relative;
+  -webkit-box-shadow: 0px 5px 0px -2px var(--mostly-black-blue);
+  box-shadow: 0px 6px 0px -2px var(--mostly-black-blue);
+}
+@media (min-width: 768px) {
+  .flip-card {
+    width: 12rem;
+    height: 11rem;
+    -webkit-box-shadow: 0px 8px 0px -2px var(--mostly-black-blue);
+    box-shadow: 0px 8px 0px -2px var(--mostly-black-blue);
+  }
+}
+
+/* .digit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: var(--soft-red);
+  font-size: 3rem;
+  letter-spacing: 1px;
+  margin: auto auto;
+}
+@media (min-width: 768px) {
+  .digit {
+    font-size: 6rem;
+  }
+} */
+.digit-text {
+  color: var(--grayish-blue);
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  margin-top: 1.3rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .digit-text {
+    font-size: 1.2rem;
+    margin-top: 1.7rem;
+  }
+}
+/* ---------------- BACKGROUND IMGs ------------------*/
+.background {
+  position: absolute;
+  z-index: -1;
+}
+
+.bg-top {
+  top: 0;
+  right: 0;
+  /* animation: wave-stars 5s ease-in-out both;
+  animation-delay: 5s;
+  animation-iteration-count: infinite; */
+}
+.bg-top img {
+  object-fit: fill;
+  object-position: 0 0;
+  height: 95vh;
+}
+
+@media (min-width: 768px) {
+  .bg-top img {
+    object-position: 0 0;
+    height: 100vh;
+  }
+}
+.bg-bottom {
+  bottom: 0;
+  left: 0;
+}
+.bg-bottom img {
+  object-fit: fill;
+  object-position: 0 0;
+  width: 100vw;
+  height: 18rem;
+}
+@media (min-width: 560px) {
+  .bg-bottom img {
+    height: 8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .bg-bottom img {
+    height: 15rem;
+  }
+}
+/* ----------  SOCIAL ICONS --------------------*/
+footer {
+  flex-shrink: 0;
+  height: 5rem;
+  letter-spacing: 2px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 13rem;
+  padding-bottom: 0rem;
+}
+
+.icon:hover {
+  fill: red;
+}
+
+/* ----------  ATRIBUTION --------------------*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: hsl(233, 8%, 62%);
+  font-size: 1rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+
+@keyframes wave-stars {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(5px, 5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}

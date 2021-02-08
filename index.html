@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/flip-clock.css">
+    <title>Launch countdown timer</title>
+
+</head>
+
+<body>
+
+    <!-- <p class="desc"></p>
+    <p class="time"></p> -->
+
+    <main class="container">
+        <div class="description">
+            <p id="description-text">WE´RE LAUNCHING SOON</p>
+        </div>
+        <div class="countdown container">
+
+            <div class="timeunit">
+                <div class="digit days">
+                    <span class="base digit_style">14</span>
+                    <div class="flap over front digit_style" data-content="13"></div>
+                    <div class="flap over back  digit_style"data-content="14"></div>
+                    <div class="flap under digit_style" data-content="14"></div>
+                    <div class="middle-line"></div>
+                </div>
+                <div class="digit-text">DAYS</div>
+            </div>
+
+            <div class="timeunit">
+                <div class="digit hours">
+                    <span class="base digit_style">14</span>
+                    <div class="flap over front digit_style" data-content="13"></div>
+                    <div class="flap over back digit_style"data-content="14"></div>
+                    <div class="flap under digit_style" data-content="14"></div>
+                    <div class="middle-line"></div>
+                </div>
+                <div class="digit-text">HOURS</div>
+            </div>
+
+            <div class="timeunit">
+                <div class="digit minutes">
+                    <span class="base digit_style">14</span>
+                    <div class="flap over front digit_style" data-content="13"></div>
+                    <div class="flap over back digit_style"data-content="14"></div>
+                    <div class="flap under digit_style" data-content="14"></div>
+                    <div class="middle-line"></div>
+                </div>
+                <div class="digit-text">MINUTES</div>
+            </div>
+
+            <div class="timeunit">
+                <div class="digit seconds">
+                    <span class="base digit_style">14</span>
+                    <div class="flap over front digit_style" data-content="13"></div>
+                    <div class="flap over back digit_style"data-content="14"></div>
+                    <div class="flap under digit_style" data-content="14"></div>
+                    <div class="middle-line"></div>
+                </div>
+                <div class="digit-text">SECONDS</div>
+            </div>
+        </div>
+
+
+    </main>
+    <div class="background bg-top">
+        <img src="./assets/bg-stars.svg" alt="">
+    </div>
+
+    <div class="background bg-bottom">
+        <img src="./assets/pattern-hills.svg" alt="">
+    </div>
+    <script src="./js/app.js" type="module"></script>
+
+    <footer class="container">
+        <div class="social-icons">
+            <div class="link-icon">
+                <a href="#"> <img class="icon" src="./assets/icon-facebook.svg" alt="facebook"></a>
+            </div>
+            <div class="link-icon">
+                <a href="#"> <img class="icon" src="./assets/icon-pinterest.svg" alt="pinterest"></a>
+            </div>
+            <div class="link-icon">
+                <a href="#"> <img class="icon" src="./assets/icon-instagram.svg" alt="instagram"></a>
+            </div>
+        </div>
+        <div class="attribution container">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded with <3 by <a href="https://github.com/sarganar/pricing-cards" target="_blank"">Sarganar</a>.
+        </div>
+
+    </footer>
+</body>
+
+</html>
