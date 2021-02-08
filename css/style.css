@@ -208,8 +208,11 @@ footer {
   padding-bottom: 0rem;
 }
 
+.icon{
+  fill:#8385A9;
+}
 .icon:hover {
-  fill: red;
+  fill: var(--soft-red);
 }
 
 /* ----------  ATRIBUTION --------------------*/
@@ -222,16 +225,4 @@ footer {
 .attribution a {
   color: hsl(228, 45%, 44%);
   text-decoration: none;
-}
-
-@keyframes wave-stars {
-  0% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(5px, 5px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
 }
