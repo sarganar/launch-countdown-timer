@@ -1,37 +1,35 @@
 function flipClockUpdate(interval) {
-  let value;
-
   const days = applyFormat(interval.days);
-  updateTimeUnit(".days", days);
+  updateTimeUnit("days", days);
 
   const hours = applyFormat(interval.hours);
-  updateTimeUnit(".hours", hours);
+  updateTimeUnit("hours", hours);
 
   const minutes = applyFormat(interval.minutes);
-  updateTimeUnit(".minutes", minutes);
+  updateTimeUnit("minutes", minutes);
 
   const seconds = applyFormat(interval.seconds);
-  updateTimeUnit(".seconds", seconds);
+  updateTimeUnit("seconds", seconds);
 }
 
 function setClock(interval) {
   const days = applyFormat(interval.days);
-  setDigitBase(".days", days);
+  setDigitBase("days", days);
 
   const hours = applyFormat(interval.hours);
-  setDigitBase(".hours", hours);
+  setDigitBase("hours", hours);
 
   const minutes = applyFormat(interval.minutes);
-  setDigitBase(".minutes", minutes);
+  setDigitBase("minutes", minutes);
 
   const seconds = applyFormat(interval.seconds);
-  setDigitBase(".seconds", seconds);
+  setDigitBase("seconds", seconds);
 }
 
 export { flipClockUpdate, setClock };
 
-function updateTimeUnit(whichDigit, value) {
-  const divDigit = document.querySelector(whichDigit);
+function updateTimeUnit(digit, value) {
+  const divDigit = document.querySelector(`.${digit}`);
 
   const base = divDigit.querySelector(".base");
   const current = divDigit.dataset.value;
@@ -52,8 +50,8 @@ function updateTimeUnit(whichDigit, value) {
   }
 }
 
-function setDigitBase(whichDigit, value) {
-  const divDigit = document.querySelector(whichDigit);
+function setDigitBase(digit, value) {
+  const divDigit = document.querySelector(`.${digit}`);
   const base = divDigit.querySelector(".base");
 
   divDigit.dataset.value = value;
