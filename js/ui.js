@@ -1,33 +1,31 @@
 function flipClockUpdate(interval) {
   let value;
 
-  value = applyFormat(interval.days);
-  updateTimeUnit(".days", value);
+  const days = applyFormat(interval.days);
+  updateTimeUnit(".days", days);
 
-  value = applyFormat(interval.hours);
-  updateTimeUnit(".hours", value);
+  const hours = applyFormat(interval.hours);
+  updateTimeUnit(".hours", hours);
 
-  value = applyFormat(interval.minutes);
-  updateTimeUnit(".minutes", value);
+  const minutes = applyFormat(interval.minutes);
+  updateTimeUnit(".minutes", minutes);
 
-  value = applyFormat(interval.seconds);
-  updateTimeUnit(".seconds", value);
+  const seconds = applyFormat(interval.seconds);
+  updateTimeUnit(".seconds", seconds);
 }
 
 function setClock(interval) {
-  let value;
+  const days = applyFormat(interval.days);
+  setDigitBase(".days", days);
 
-  value = applyFormat(interval.days);
-  setDigitBase(".days", value);
+  const hours = applyFormat(interval.hours);
+  setDigitBase(".hours", hours);
 
-  value = applyFormat(interval.hours);
-  setDigitBase(".hours", value);
+  const minutes = applyFormat(interval.minutes);
+  setDigitBase(".minutes", minutes);
 
-  value = applyFormat(interval.minutes);
-  setDigitBase(".minutes", value);
-
-  value = applyFormat(interval.seconds);
-  setDigitBase(".seconds", value);
+  const seconds = applyFormat(interval.seconds);
+  setDigitBase(".seconds", seconds);
 }
 
 export { flipClockUpdate, setClock };
