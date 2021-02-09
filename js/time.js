@@ -22,16 +22,15 @@ export default getInterval;
 // ?date=2021-03-25&time=9:00&gmt=-3:00&desc=FEC Meeting
 const getDeadlineFromURL = () => {
   const parametersURL = new URLSearchParams(window.location.search);
-  let deadlineFromURL = "";
   let deadline;
 
   const description = parametersURL.get("desc") || "WE´RE LAUNCHING SOON";
 
-  deadlineFromURL = parametersURL.get("date") || "";
-  deadlineFromURL += " ";
-  deadlineFromURL += parametersURL.get("time") || "";
-  deadlineFromURL += " ";
-  deadlineFromURL += parametersURL.get("gmt") || "";
+  const date = parametersURL.get("date") || "";
+  const time = parametersURL.get("time") || "";
+  const gmt = parametersURL.get("gmt") || "";
+
+  const deadlineFromURL = `${date} ${time} ${gmt}`;
 
   // parametersURL.forEach((element) => (deadlineFromURL += ` ${element}`));
   console.log("deadlineFromURL:", deadlineFromURL);
@@ -39,7 +38,7 @@ const getDeadlineFromURL = () => {
   deadline = new Date(deadlineFromURL);
 
   if (!isValidDate(deadline)) {
-    console.log("Invalid or nonexistent Date form URL.");
+    console.log("Invalid or nonexistent Date from URL.");
     deadline = addDays(getToday(), 14);
   }
   console.log("deadline parsed:", deadline);
